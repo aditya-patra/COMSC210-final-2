@@ -201,7 +201,12 @@ int main() {
                 else {
                     cnt_keychains++;
                 }
-                keychains[2] = order_pair; 
+                for(int e = 0; e < 3; e++) {
+                    if (keychains[e].size() == 0) {
+                        keychains[e] = order_pair; 
+                        break;
+                    }
+                }
                 break;
             }
         }
