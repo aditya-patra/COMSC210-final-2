@@ -26,9 +26,12 @@ int main() {
         order_pair.push_back(order);
         orders.push_back(order_pair);
     }
-    for(list<string> order_pair : orders) {
+    for(const auto& order_pair : orders) {
         int name_extracted = 0;
+        cout << order_pair.size();
         for(auto it = order_pair.begin(); it != order_pair.end(); it++) {
+            break;
+            /*
             if (!name_extracted) {
                 name = *it;
                 name_extracted = 1;
@@ -39,7 +42,7 @@ int main() {
             else {
                 order = *it;
                 // cout << order << endl;
-            }
+            }*/
         }/*
         if (head != nullptr) {
             Coffee* temp = head;
