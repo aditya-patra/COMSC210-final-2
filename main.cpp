@@ -194,15 +194,14 @@ int main() {
         if ((int)(rand() % 100) > 49) {
             int curr_idx = 0;
             for(const auto& order_pair : orders) { 
-                if (curr_idx < cnt_bracelets) {
+                if (curr_idx < cnt_keychains) {
                     curr_idx++;
                     continue;
                 }
                 else {
-                    cnt_bracelets++;
+                    cnt_keychains++;
                 }
-                int name_extracted = 0;
-                bracelets.push_back(order_pair); 
+                keychains[2] = order_pair; 
                 break;
             }
         }
