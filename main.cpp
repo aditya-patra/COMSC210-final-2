@@ -57,12 +57,12 @@ int main() {
             new_order->order = order;
             head = new_order;
         }
+        muffins.push_back(order_pair); 
+        cnt_muffins++;
         cnt_coffee++;
         if (cnt_coffee == 3) {
             break;
         }
-        muffins.push_back(order_pair);
-        cnt_muffins++;
     }
     Coffee* temp = head;
     cout << "Coffee Queue: " << endl;
