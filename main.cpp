@@ -65,10 +65,10 @@ int main() {
         temp = temp->next;
     }
     for(int i = 0; i < 10; i++) {
+        Coffee* serve = head;
+        head = head->next;
+        delete serve;
         if ((int) (rand() % 2) > 0) {
-            Coffee* serve = head;
-            head = head->next;
-            delete serve;
         }
     }
 }
