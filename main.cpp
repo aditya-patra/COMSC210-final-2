@@ -28,22 +28,15 @@ int main() {
     }
     for(const auto& order_pair : orders) {
         int name_extracted = 0;
-        cout << order_pair.size();
         for(auto it = order_pair.begin(); it != order_pair.end(); it++) {
-            break;
-            /*
             if (!name_extracted) {
                 name = *it;
                 name_extracted = 1;
-                cout << name << " ";
-                cout << "b";
-                break;
             }
             else {
                 order = *it;
-                // cout << order << endl;
-            }*/
-        }/*
+            }
+        }
         if (head != nullptr) {
             Coffee* temp = head;
             while (temp->next != nullptr) {
@@ -61,7 +54,8 @@ int main() {
             new_order->order = order;
             head = new_order;
             cout << "head defined" << head;
-        }*/
+        }
+        cout << "trying" << endl;
     }
     /*
     Coffee* temp = head;
