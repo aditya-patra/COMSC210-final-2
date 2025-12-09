@@ -17,7 +17,11 @@ int main() {
     ifstream file("orders.txt");
     string name;
     string order;
+    vector<list<string>> orders;
     while(getline(file, name)) {
+        list<string> order_pair;
         cout << name << endl;
+        order_pair.push_back(name);
+        getline(file, order);
     }
 }
