@@ -38,11 +38,12 @@ int main() {
                 order = *it;
                 cout << order << endl;
             }
-        }/*
+        }
         if (head != nullptr) {
             Coffee* temp = head;
             while (temp->next != nullptr) {
                 temp = temp->next;
+                cout << "next";
             }
             Coffee* new_order = new Coffee;
             new_order->name = name;
@@ -54,7 +55,7 @@ int main() {
             new_order->name = name;
             new_order->order = order;
             head = new_order;
-        }*/
+        }
     }
     /*
     Coffee* temp = head;
