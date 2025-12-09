@@ -127,6 +127,45 @@ int main() {
                 break;
             }
         }
+        if ((int)(rand() % 100) > 49) {
+            int curr_idx = 0;
+            for(const auto& order_pair : orders) { 
+                if (curr_idx < cnt_coffee) {
+                    curr_idx++;
+                    continue;
+                }
+                else {
+                    cnt_coffee++;
+                }
+                int name_extracted = 0;
+                for(auto it = order_pair.begin(); it != order_pair.end(); it++) {
+                    if (!name_extracted) {
+                        name = *it;
+                        name_extracted = 1;
+                    }
+                    else {
+                        order = *it;
+                    }
+                }
+                if (head != nullptr) {
+                    Coffee* temp = head;
+                    while (temp->next != nullptr) {
+                        temp = temp->next;
+                    }
+                    Coffee* new_order = new Coffee;
+                    new_order->name = name;
+                    new_order->order = order;
+                    temp->next = new_order;
+                }
+                else {
+                    Coffee* new_order = new Coffee;
+                    new_order->name = name;
+                    new_order->order = order;
+                    head = new_order;
+                }
+                break;
+            }
+        }
         Coffee* temp = head;
         cout << "\nCoffee Queue: " << endl;
         while(temp != nullptr) {
