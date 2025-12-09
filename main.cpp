@@ -29,6 +29,7 @@ int main() {
         orders.push_back(order_pair);
     }
     int cnt_coffee = 0;
+    int cnt_muffins = 0;
     for(const auto& order_pair : orders) {
         int name_extracted = 0;
         for(auto it = order_pair.begin(); it != order_pair.end(); it++) {
@@ -61,14 +62,23 @@ int main() {
             break;
         }
         muffins.push_back(order_pair);
+        cnt_muffins++;
     }
     Coffee* temp = head;
     cout << "Coffee Queue: " << endl;
     while(temp != nullptr) {
-        cout << temp->name << " " << temp->order << endl;
+        cout << temp->name << "  " << temp->order << endl;
         temp = temp->next;
     }
+    cout << "\nMuffins Queue: " << endl;
+    for(const auto& pair: muffins) {
+        for (auto it = pair.begin(); it != pair.end(); it++) {
+            cout << *it << "  ";
+        }
+        cout << endl;
+    }
     for(int i = 0; i < 10; i++) {
+        cout << "Simulation " << (i+1) << ": \n";
         if (head != nullptr) {
             Coffee* serve = head;
             head = head->next;
@@ -115,9 +125,9 @@ int main() {
             }
         }
         Coffee* temp = head;
-        cout << "Current Line: " << endl;
+        cout << "\nCoffee Queue: " << endl;
         while(temp != nullptr) {
-            cout << temp->name << " " << temp->order << endl;
+            cout << temp->name << "  " << temp->order << endl;
             temp = temp->next;
         }
         cout << endl;
