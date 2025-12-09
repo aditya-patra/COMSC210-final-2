@@ -168,7 +168,7 @@ int main() {
                     cnt_bracelets++;
                 }
                 int name_extracted = 0;
-                bracelets.push_back(order_pair);
+                bracelets.push_back(order_pair); 
                 break;
             }
         }
