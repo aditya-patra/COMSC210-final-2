@@ -33,6 +33,8 @@ int main() {
                 name = *it;
                 name_extracted = 1;
                 cout << name << " ";
+                cout << "b";
+                break;
             }
             else {
                 order = *it;
