@@ -74,7 +74,7 @@ int main() {
         int rand_var = (int)(rand() % 100);
         if ((int)(rand() % 100) > 49) {
             int curr_idx = 0;
-            for(const auto& order_pair : orders) {
+            for(const auto& order_pair : orders) { 
                 if (curr_idx < cnt) {
                     curr_idx++;
                     continue;
