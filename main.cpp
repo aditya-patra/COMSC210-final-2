@@ -82,8 +82,8 @@ int main() {
         cout << endl;
     }
     cout << endl;
-    cout << "\nMuffins Queue: " << endl;
-    for(const auto& pair: muffins) {
+    cout << "\nBracelet Queue: " << endl;
+    for(const auto& pair: bracelets) {
         for (auto it = pair.begin(); it != pair.end(); it++) {
             cout << *it << "  ";
         }
