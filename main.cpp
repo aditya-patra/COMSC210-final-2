@@ -93,6 +93,13 @@ int main() {
         }
         cout << endl;
     }
+    cout << "\nBracelet Queue: " << endl;
+    for(const auto& pair: bracelets) {
+        for (auto it = pair.begin(); it != pair.end(); it++) {
+            cout << *it << "  ";
+        }
+        cout << endl;
+    }
     cout << endl;
     for(int i = 0; i < 10; i++) {
         cout << "\nSimulation " << (i+1) << ": \n";
