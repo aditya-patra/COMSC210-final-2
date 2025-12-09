@@ -93,9 +93,9 @@ int main() {
         }
         cout << endl;
     }
-    cout << "\nBracelet Queue: " << endl;
-    for(const auto& pair: bracelets) {
-        for (auto it = pair.begin(); it != pair.end(); it++) {
+    cout << "\nKeychains Queue: " << endl;
+    for(int i = 0; i < 3; i++) {
+        for (auto it = keychains[i].begin(); it != keychains[i].end(); it++) {
             cout << *it << "  ";
         }
         cout << endl;
