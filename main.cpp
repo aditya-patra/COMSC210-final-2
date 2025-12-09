@@ -232,6 +232,9 @@ int main() {
         }
         cout << "\nKeychains Queue: " << endl;
         for(int i = 0; i < 3; i++) {
+            if (keychains[i].size() == 0) {
+                break;
+            }
             for (auto it = keychains[i].begin(); it != keychains[i].end(); it++) {
                 cout << *it << "  ";
             }
