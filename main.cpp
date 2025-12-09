@@ -3,6 +3,7 @@
 #include <list>
 #include <fstream>
 #include <deque>
+#include <array>
 
 using namespace std;
 
@@ -21,6 +22,7 @@ int main() {
     vector<list<string>> orders;
     deque<list<string>> muffins;
     vector<list<string>> bracelets;
+    array<list<string>, 3> keychains;
     while(getline(file, name)) {
         list<string> order_pair;
         // cout << name << endl;
@@ -32,6 +34,7 @@ int main() {
     int cnt_coffee = 0;
     int cnt_muffins = 0;
     int cnt_bracelets = 0;
+    int cnt_keychains = 0;
     for(const auto& order_pair : orders) {
         int name_extracted = 0;
         for(auto it = order_pair.begin(); it != order_pair.end(); it++) {
