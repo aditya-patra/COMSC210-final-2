@@ -100,7 +100,10 @@ int main() {
             muffins.pop_front();
         }
         if (bracelets.size() > 0) {
-            bracelets.pop(0); 
+            for(auto it = bracelets.begin(); it != bracelets.end(); it++) {
+                bracelets.begin() = (it+1);
+                delete it;
+            } 
         }
         int rand_var = (int)(rand() % 100);
         if ((int)(rand() % 100) > 49) {
