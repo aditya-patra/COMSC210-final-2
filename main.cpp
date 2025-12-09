@@ -149,5 +149,13 @@ int main() {
             temp = temp->next;
         }
         cout << endl;
+        cout << "\nMuffins Queue: " << endl;
+        for(const auto& pair: muffins) {
+            for (auto it = pair.begin(); it != pair.end(); it++) {
+                cout << *it << "  ";
+            }
+            cout << endl;
+        }
+        cout << endl;
     }
 }
