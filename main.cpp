@@ -36,9 +36,9 @@ int main() {
             }
             else {
                 order = *it;
-                cout << order << endl;
+                // cout << order << endl;
             }
-        }
+        }/*
         if (head != nullptr) {
             Coffee* temp = head;
             while (temp->next != nullptr) {
@@ -55,7 +55,9 @@ int main() {
             new_order->name = name;
             new_order->order = order;
             head = new_order;
-        }
+            cout << "head defined" << head;
+        }*/
+        break;
     }
     /*
     Coffee* temp = head;
