@@ -77,8 +77,9 @@ int main() {
         }
         cout << endl;
     }
+    cout << endl;
     for(int i = 0; i < 10; i++) {
-        cout << "Simulation " << (i+1) << ": \n";
+        cout << "\nSimulation " << (i+1) << ": \n";
         if (head != nullptr) {
             Coffee* serve = head;
             head = head->next;
@@ -148,7 +149,6 @@ int main() {
             cout << temp->name << "  " << temp->order << endl;
             temp = temp->next;
         }
-        cout << endl;
         cout << "\nMuffins Queue: " << endl;
         for(const auto& pair: muffins) {
             for (auto it = pair.begin(); it != pair.end(); it++) {
