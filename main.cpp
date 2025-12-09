@@ -48,4 +48,9 @@ int main() {
             temp->next = new_order;
         }
     }
+    Coffee* temp = head;
+    while(temp != nullptr) {
+        cout << temp->name << " " << temp->order << endl;
+        temp = temp->next;
+    }
 }
