@@ -43,6 +43,7 @@ int main() {
                 temp = temp->next;
             }
             Coffee* new_order = new Coffee;
+            cout << name << " " << order << endl;
             new_order->name = name;
             new_order->order = order;
             temp->next = new_order;
@@ -50,7 +51,7 @@ int main() {
     }
     Coffee* temp = head;
     while(temp != nullptr) {
-        cout << temp->name << " " << temp->order << endl;
+        // cout << temp->name << " " << temp->order << endl;
         temp = temp->next;
     }
 }
