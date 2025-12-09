@@ -37,5 +37,15 @@ int main() {
                 order = *it;
             }
         }
+        if (head != nullptr) {
+            Coffee* temp = head;
+            while (temp->next != nullptr) {
+                temp = temp->next;
+            }
+            Coffee* new_order = new Coffee;
+            new_order->name = name;
+            new_order->order = order;
+            temp->next = new_order;
+        }
     }
 }
