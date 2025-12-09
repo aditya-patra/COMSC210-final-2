@@ -1,10 +1,14 @@
 #include <iostream>
 
-struct Order {
+using namespace std;
+
+struct Coffee {
     public:
-    private:
+        string name;
+        string order;
+        Coffee* next = nullptr;
 };
 
 int main() {
-    Order order;
+    Coffee* head;
 }
