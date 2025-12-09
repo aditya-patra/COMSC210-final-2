@@ -84,6 +84,9 @@ int main() {
             head = head->next;
             delete serve;
         }
+        if (muffins.size() > 0) {
+            muffins.pop_front();
+        }
         int rand_var = (int)(rand() % 100);
         if ((int)(rand() % 100) > 49) {
             int curr_idx = 0;
