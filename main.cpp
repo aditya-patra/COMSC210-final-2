@@ -58,5 +58,5 @@ int main() {
     while(temp != nullptr) {
         cout << temp->name << " " << temp->order << endl;
         temp = temp->next;
-    }
+    } 
 }
