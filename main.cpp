@@ -63,12 +63,12 @@ int main() {
     while(temp != nullptr) {
         cout << temp->name << " " << temp->order << endl;
         temp = temp->next;
-    } 
+    }
     for(int i = 0; i < 10; i++) {
         if ((int) (rand() % 2) > 0) {
-            temp = head;
+            Coffee* serve = head;
             head = head->next;
-            delete temp;
+            delete serve;
         }
     }
 }
