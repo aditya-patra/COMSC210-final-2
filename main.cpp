@@ -23,5 +23,12 @@ int main() {
         cout << name << endl;
         order_pair.push_back(name);
         getline(file, order);
+        orders.push_back(order_pair);
+    }
+    for(list<string> order_pair : orders) {
+        for(auto it = order_pair.begin(); it != order_pair.end(); it++) {
+            cout << *it << " ";
+        }
+        cout << endl;
     }
 }
