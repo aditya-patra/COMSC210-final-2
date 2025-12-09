@@ -27,9 +27,15 @@ int main() {
         orders.push_back(order_pair);
     }
     for(list<string> order_pair : orders) {
+        int name_extracted = 0;
         for(auto it = order_pair.begin(); it != order_pair.end(); it++) {
-            cout << *it << " "; 
+            if (!name_extracted) {
+                name = *it;
+                name_extracted = 1;
+            }
+            else {
+                order = *it;
+            }
         }
-        cout << endl;
     }
 }
