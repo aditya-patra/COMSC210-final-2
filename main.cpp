@@ -66,6 +66,8 @@ int main() {
         cnt_muffins++;
         bracelets.push_back(order_pair); 
         cnt_bracelets++;
+        keychains[cnt_keychains] = order_pair; 
+        cnt_keychains++;
         cnt_coffee++;
         if (cnt_coffee == 3) {
             break;
