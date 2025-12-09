@@ -28,7 +28,7 @@ int main() {
     }
     for(list<string> order_pair : orders) {
         for(auto it = order_pair.begin(); it != order_pair.end(); it++) {
-            cout << *it << " ";
+            cout << *it << " "; 
         }
         cout << endl;
     }
