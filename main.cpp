@@ -114,6 +114,13 @@ int main() {
         if (bracelets.size() > 0) {
             bracelets.erase(bracelets.begin());
         }
+        if (keychains[i].size() > 0) {
+            for(int i = 0; i < 2; i++) {
+                keychains[i] = keychains[i+1];
+                list<string> empty_lst;
+                keychains[i+1] = empty_lst;
+            }
+        }
         int rand_var = (int)(rand() % 100);
         if ((int)(rand() % 100) > 49) {
             int curr_idx = 0;
