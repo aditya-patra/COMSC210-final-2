@@ -23,6 +23,7 @@ int main() {
         cout << name << endl;
         order_pair.push_back(name);
         getline(file, order);
+        order_pair.push_back(order);
         orders.push_back(order_pair);
     }
     for(list<string> order_pair : orders) {
