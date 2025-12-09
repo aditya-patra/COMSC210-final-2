@@ -225,6 +225,13 @@ int main() {
             }
             cout << endl;
         }
+        cout << "\nKeychains Queue: " << endl;
+        for(int i = 0; i < 3; i++) {
+            for (auto it = keychains[i].begin(); it != keychains[i].end(); it++) {
+                cout << *it << "  ";
+            }
+            cout << endl;
+        }
         cout << endl;
     }
 }
