@@ -160,15 +160,15 @@ int main() {
         if ((int)(rand() % 100) > 49) {
             int curr_idx = 0;
             for(const auto& order_pair : orders) { 
-                if (curr_idx < cnt_muffins) {
+                if (curr_idx < cnt_bracelets) {
                     curr_idx++;
                     continue;
                 }
                 else {
-                    cnt_muffins++;
+                    cnt_bracelets++;
                 }
                 int name_extracted = 0;
-                muffins.push_back(order_pair);
+                bracelets.push_back(order_pair);
                 break;
             }
         }
