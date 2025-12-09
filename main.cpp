@@ -65,10 +65,14 @@ int main() {
         temp = temp->next;
     }
     for(int i = 0; i < 10; i++) {
-        Coffee* serve = head;
-        head = head->next;
-        delete serve;
-        if ((int) (rand() % 2) > 0) {
+        if (head != nullptr) {
+            Coffee* serve = head;
+            head = head->next;
+            delete serve;
+        }
+        int rand_var = (int)(rand() % 100);
+        cout << rand_var << endl;
+        if ((int)(rand() % 100) > 49) {
             int curr_idx = 0;
             for(const auto& order_pair : orders) {
                 if (curr_idx < cnt) {
