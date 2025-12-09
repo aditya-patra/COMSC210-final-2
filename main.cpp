@@ -43,14 +43,14 @@ int main() {
                 temp = temp->next;
             }
             Coffee* new_order = new Coffee;
-            cout << name << " " << order << endl;
+            cout << order << endl;
             new_order->name = name;
             new_order->order = order;
             temp->next = new_order;
         }
         else {
             Coffee* new_order = new Coffee;
-            cout << name << " " << order << endl;
+            cout << order << endl;
             new_order->name = name;
             new_order->order = order;
             head = new_order;
