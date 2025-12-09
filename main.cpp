@@ -32,33 +32,34 @@ int main() {
             if (!name_extracted) {
                 name = *it;
                 name_extracted = 1;
+                cout << name << " ";
             }
             else {
                 order = *it;
+                cout << order << endl;
             }
-        }
+        }/*
         if (head != nullptr) {
             Coffee* temp = head;
             while (temp->next != nullptr) {
                 temp = temp->next;
             }
             Coffee* new_order = new Coffee;
-            cout << order << endl;
             new_order->name = name;
             new_order->order = order;
             temp->next = new_order;
         }
         else {
             Coffee* new_order = new Coffee;
-            cout << order << endl;
             new_order->name = name;
             new_order->order = order;
             head = new_order;
-        }
+        }*/
     }
+    /*
     Coffee* temp = head;
     while(temp != nullptr) {
         // cout << temp->name << " " << temp->order << endl;
         temp = temp->next;
-    }
+    }*/
 }
