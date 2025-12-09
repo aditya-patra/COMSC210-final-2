@@ -121,7 +121,6 @@ int main() {
                 keychains[i+1] = empty_lst;
             }
         }
-        int rand_var = (int)(rand() % 100);
         if ((int)(rand() % 100) > 49) {
             int curr_idx = 0;
             for(const auto& order_pair : orders) { 
