@@ -76,11 +76,14 @@ int main() {
             int curr_idx = 0;
             for(const auto& order_pair : orders) {
                 if (curr_idx < cnt) {
+                    curr_idx++;
+                    cout << "c";
                     continue;
                 }
                 else {
                     cnt++;
                 }
+                cout << "b";
                 int name_extracted = 0;
                 for(auto it = order_pair.begin(); it != order_pair.end(); it++) {
                     if (!name_extracted) {
@@ -91,6 +94,7 @@ int main() {
                         order = *it;
                     }
                 }
+                cout << name << " " << order << endl;
                 if (head != nullptr) {
                     Coffee* temp = head;
                     while (temp->next != nullptr) {
