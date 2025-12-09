@@ -99,6 +99,9 @@ int main() {
         if (muffins.size() > 0) {
             muffins.pop_front();
         }
+        if (bracelets.size() > 0) {
+            bracelets.pop(0); 
+        }
         int rand_var = (int)(rand() % 100);
         if ((int)(rand() % 100) > 49) {
             int curr_idx = 0;
