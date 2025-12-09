@@ -20,7 +20,7 @@ int main() {
     vector<list<string>> orders;
     while(getline(file, name)) {
         list<string> order_pair;
-        cout << name << endl;
+        // cout << name << endl;
         order_pair.push_back(name);
         getline(file, order);
         order_pair.push_back(order);
@@ -62,7 +62,6 @@ int main() {
             head = new_order;
             cout << "head defined" << head;
         }*/
-        break;
     }
     /*
     Coffee* temp = head;
