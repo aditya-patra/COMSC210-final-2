@@ -2,6 +2,7 @@
 #include <vector>
 #include <list>
 #include <fstream>
+#include <deque>
 
 using namespace std;
 
@@ -18,6 +19,7 @@ int main() {
     string name;
     string order;
     vector<list<string>> orders;
+    deque<list<string>> muffins;
     while(getline(file, name)) {
         list<string> order_pair;
         // cout << name << endl;
@@ -26,7 +28,7 @@ int main() {
         order_pair.push_back(order);
         orders.push_back(order_pair);
     }
-    int cnt = 0;
+    int cnt_coffee = 0;
     for(const auto& order_pair : orders) {
         int name_extracted = 0;
         for(auto it = order_pair.begin(); it != order_pair.end(); it++) {
@@ -54,13 +56,14 @@ int main() {
             new_order->order = order;
             head = new_order;
         }
-        cnt++;
-        if (cnt == 3) {
+        cnt_coffee++;
+        if (cnt_coffee == 3) {
             break;
         }
+        muffins.push_back(order_pair);
     }
     Coffee* temp = head;
-    cout << "Current Line: " << endl;
+    cout << "Coffee Queue: " << endl;
     while(temp != nullptr) {
         cout << temp->name << " " << temp->order << endl;
         temp = temp->next;
@@ -75,12 +78,12 @@ int main() {
         if ((int)(rand() % 100) > 49) {
             int curr_idx = 0;
             for(const auto& order_pair : orders) { 
-                if (curr_idx < cnt) {
+                if (curr_idx < cnt_coffee) {
                     curr_idx++;
                     continue;
                 }
                 else {
-                    cnt++;
+                    cnt_coffee++;
                 }
                 int name_extracted = 0;
                 for(auto it = order_pair.begin(); it != order_pair.end(); it++) {
