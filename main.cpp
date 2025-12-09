@@ -26,6 +26,7 @@ int main() {
         order_pair.push_back(order);
         orders.push_back(order_pair);
     }
+    int cnt = 0;
     for(const auto& order_pair : orders) {
         int name_extracted = 0;
         for(auto it = order_pair.begin(); it != order_pair.end(); it++) {
@@ -52,6 +53,10 @@ int main() {
             new_order->name = name;
             new_order->order = order;
             head = new_order;
+        }
+        cnt++;
+        if (cnt == 3) {
+            break;
         }
     }
     Coffee* temp = head;
