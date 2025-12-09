@@ -103,11 +103,12 @@ int main() {
                     new_order->order = order;
                     head = new_order;
                 }
-                cnt++;
-                if (cnt == 3) {
-                    break;
-                }
             }
+        }
+        Coffee* temp = head;
+        while(temp != nullptr) {
+            cout << temp->name << " " << temp->order << endl;
+            temp = temp->next;
         }
     }
 }
