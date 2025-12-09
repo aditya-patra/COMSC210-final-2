@@ -81,7 +81,6 @@ int main() {
         }
         cout << endl;
     }
-    cout << endl;
     cout << "\nBracelet Queue: " << endl;
     for(const auto& pair: bracelets) {
         for (auto it = pair.begin(); it != pair.end(); it++) {
@@ -163,6 +162,13 @@ int main() {
         }
         cout << "\nMuffins Queue: " << endl;
         for(const auto& pair: muffins) {
+            for (auto it = pair.begin(); it != pair.end(); it++) {
+                cout << *it << "  ";
+            }
+            cout << endl;
+        }
+        cout << "\nBracelet Queue: " << endl;
+        for(const auto& pair: bracelets) {
             for (auto it = pair.begin(); it != pair.end(); it++) {
                 cout << *it << "  ";
             }
