@@ -20,6 +20,7 @@ int main() {
     string order;
     vector<list<string>> orders;
     deque<list<string>> muffins;
+    vector<list<string>> bracelets;
     while(getline(file, name)) {
         list<string> order_pair;
         // cout << name << endl;
@@ -30,6 +31,7 @@ int main() {
     }
     int cnt_coffee = 0;
     int cnt_muffins = 0;
+    int cnt_bracelets = 0;
     for(const auto& order_pair : orders) {
         int name_extracted = 0;
         for(auto it = order_pair.begin(); it != order_pair.end(); it++) {
@@ -59,6 +61,8 @@ int main() {
         }
         muffins.push_back(order_pair); 
         cnt_muffins++;
+        bracelets.push_back(order_pair); 
+        cnt_bracelets++;
         cnt_coffee++;
         if (cnt_coffee == 3) {
             break;
