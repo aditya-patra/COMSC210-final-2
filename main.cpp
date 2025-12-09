@@ -170,7 +170,6 @@ int main() {
                 else {
                     cnt_muffins++;
                 }
-                int name_extracted = 0;
                 muffins.push_back(order_pair);
                 break;
             }
@@ -185,7 +184,6 @@ int main() {
                 else {
                     cnt_bracelets++;
                 }
-                int name_extracted = 0;
                 bracelets.push_back(order_pair); 
                 break;
             }
