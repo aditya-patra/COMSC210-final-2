@@ -114,11 +114,11 @@ int main() {
         if (bracelets.size() > 0) {
             bracelets.erase(bracelets.begin());
         }
-        if (keychains[i].size() > 0) {
-            for(int i = 0; i < 2; i++) {
-                keychains[i] = keychains[i+1];
+        if (keychains[0].size() > 0) {
+            for(int e = 0; e < 2; e++) {
+                keychains[e] = keychains[e+1];
                 list<string> empty_lst;
-                keychains[i+1] = empty_lst;
+                keychains[e+1] = empty_lst;
             }
         }
         if ((int)(rand() % 100) > 49) {
