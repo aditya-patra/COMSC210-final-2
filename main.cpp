@@ -112,7 +112,7 @@ int main() {
             muffins.pop_front();
         }
         if (bracelets.size() > 0) {
-            bracelets.erase(bracelets.begin());
+            bracelets.erase(bracelets.begin()); 
         }
         if (keychains[0].size() > 0) {
             for(int e = 0; e < 2; e++) {
