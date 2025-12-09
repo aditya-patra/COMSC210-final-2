@@ -60,6 +60,7 @@ int main() {
         }
     }
     Coffee* temp = head;
+    cout << "Current Line: " << endl;
     while(temp != nullptr) {
         cout << temp->name << " " << temp->order << endl;
         temp = temp->next;
@@ -71,19 +72,16 @@ int main() {
             delete serve;
         }
         int rand_var = (int)(rand() % 100);
-        cout << rand_var << endl;
         if ((int)(rand() % 100) > 49) {
             int curr_idx = 0;
             for(const auto& order_pair : orders) {
                 if (curr_idx < cnt) {
                     curr_idx++;
-                    cout << "c";
                     continue;
                 }
                 else {
                     cnt++;
                 }
-                cout << "b";
                 int name_extracted = 0;
                 for(auto it = order_pair.begin(); it != order_pair.end(); it++) {
                     if (!name_extracted) {
@@ -94,7 +92,6 @@ int main() {
                         order = *it;
                     }
                 }
-                cout << name << " " << order << endl;
                 if (head != nullptr) {
                     Coffee* temp = head;
                     while (temp->next != nullptr) {
@@ -111,12 +108,15 @@ int main() {
                     new_order->order = order;
                     head = new_order;
                 }
+                break;
             }
         }
         Coffee* temp = head;
+        cout << "Current Line: " << endl;
         while(temp != nullptr) {
             cout << temp->name << " " << temp->order << endl;
             temp = temp->next;
         }
+        cout << endl;
     }
 }
